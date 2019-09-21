@@ -1,0 +1,15 @@
+<center>
+<h1>何次受け？俺６次受け</h1>
+
+<% @board.each do |board| %>   
+<div class="posts-index-item">
+<p><%= board.created_at %></p>
+<%= board.content %>
+
+</div>
+<% end %>
+<%= form_tag("/chat/create") do %>
+<textarea name="content"></textarea>
+<input type="submit" value="送信">
+<%  end %>
+</center>
